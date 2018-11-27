@@ -1,0 +1,23 @@
+Message-ID: <afb74f43afa5b57163ebe4c91cb2bf9f@localhost>
+Date: Mon, 26 Nov 2018 06:27:07 +0000
+Subject: Message subject
+From: 
+To: radhikarani@mansainfotech.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_1543213627_7fde63ecf0aff3d61fa505c7c0e57063_=_"
+
+
+--_=_swift_1543213627_7fde63ecf0aff3d61fa505c7c0e57063_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Plain text content
+
+--_=_swift_1543213627_7fde63ecf0aff3d61fa505c7c0e57063_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<b>HTML content</b>
+
+--_=_swift_1543213627_7fde63ecf0aff3d61fa505c7c0e57063_=_--

@@ -1,0 +1,2405 @@
+2018-11-23 05:52:32 [127.0.0.1][-][k7oi08nud66gn4eesjoase00pa][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Hash is invalid. in /var/www/html/project/vendor/yiisoft/yii2/base/Security.php:651
+Stack trace:
+#0 /var/www/html/project/common/models/User.php(153): yii\base\Security->validatePassword('admin', '21232f297a57a5a...')
+#1 /var/www/html/project/common/models/LoginForm.php(45): common\models\User->validatePassword('admin')
+#2 [internal function]: common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator))
+#3 /var/www/html/project/vendor/yiisoft/yii2/validators/InlineValidator.php(72): call_user_func(Array, 'password', NULL, Object(yii\validators\InlineValidator))
+#4 /var/www/html/project/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#6 /var/www/html/project/common/models/LoginForm.php(58): yii\base\Model->validate()
+#7 /var/www/html/project/backend/controllers/SiteController.php(78): common\models\LoginForm->login()
+#8 [internal function]: backend\controllers\SiteController->actionLogin()
+#9 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#11 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#13 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /var/www/html/project/backend/web/index.php(17): yii\base\Application->run()
+#15 {main}
+2018-11-23 05:52:32 [127.0.0.1][-][k7oi08nud66gn4eesjoase00pa][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'yDnzm4I9pnLzuWK1NkjWUYq277t8JVQesEN0T5Oa0bOcTKf_6G_WMJnvFMxFEL8dwNyn2D1VC3fVKisE58Xo1A=='
+    'LoginForm' => [
+        'username' => 'test'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    'advanced-frontend' => 'e7i6rk9lu6os0eq18odvbvoomt'
+    '_csrf-frontend' => 'd4a9fcdff60a1b23e9b4cf1e457332d0792ec8dfb1ee47ffc9dc0b649d526200a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"8X0q8WLQG0fBkmpMLmxNU5K9FT8wDk8G\";}'
+    'advanced-backend' => 'k7oi08nud66gn4eesjoase00pa'
+    '_csrf-backend' => 'f1fdb382352a530935f67892cadc55b0ae96d6a84ea318bbf02ed3e9616e8d24a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"TuTdjRpBjVvysXiLJjHcAp_iei_Kt_9g\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/index.php?r=site%2Findex'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '45657'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/backend/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '235'
+    'HTTP_CONTENT_LENGTH' => '235'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; advanced-frontend=e7i6rk9lu6os0eq18odvbvoomt; _csrf-frontend=d4a9fcdff60a1b23e9b4cf1e457332d0792ec8dfb1ee47ffc9dc0b649d526200a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%228X0q8WLQG0fBkmpMLmxNU5K9FT8wDk8G%22%3B%7D; advanced-backend=k7oi08nud66gn4eesjoase00pa; _csrf-backend=f1fdb382352a530935f67892cadc55b0ae96d6a84ea318bbf02ed3e9616e8d24a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22TuTdjRpBjVvysXiLJjHcAp_iei_Kt_9g%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1542952352.0508
+    'REQUEST_TIME' => 1542952352
+]
+2018-11-23 05:52:57 [127.0.0.1][-][k7oi08nud66gn4eesjoase00pa][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Hash is invalid. in /var/www/html/project/vendor/yiisoft/yii2/base/Security.php:651
+Stack trace:
+#0 /var/www/html/project/common/models/User.php(153): yii\base\Security->validatePassword('admin', '21232f297a57a5a...')
+#1 /var/www/html/project/common/models/LoginForm.php(45): common\models\User->validatePassword('admin')
+#2 [internal function]: common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator))
+#3 /var/www/html/project/vendor/yiisoft/yii2/validators/InlineValidator.php(72): call_user_func(Array, 'password', NULL, Object(yii\validators\InlineValidator))
+#4 /var/www/html/project/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#6 /var/www/html/project/common/models/LoginForm.php(58): yii\base\Model->validate()
+#7 /var/www/html/project/backend/controllers/SiteController.php(78): common\models\LoginForm->login()
+#8 [internal function]: backend\controllers\SiteController->actionLogin()
+#9 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#11 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#13 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /var/www/html/project/backend/web/index.php(17): yii\base\Application->run()
+#15 {main}
+2018-11-23 05:52:57 [127.0.0.1][-][k7oi08nud66gn4eesjoase00pa][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'MVskQRwmSfXZqlI5sgK6pgnroWNhtn2PYMS6UelWsNJlLnAldnQ5t7P8JEDBWtPqQ4HpACDGIuYFreUanQmJtQ=='
+    'LoginForm' => [
+        'username' => 'test'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    'advanced-frontend' => 'e7i6rk9lu6os0eq18odvbvoomt'
+    '_csrf-frontend' => 'd4a9fcdff60a1b23e9b4cf1e457332d0792ec8dfb1ee47ffc9dc0b649d526200a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"8X0q8WLQG0fBkmpMLmxNU5K9FT8wDk8G\";}'
+    'advanced-backend' => 'k7oi08nud66gn4eesjoase00pa'
+    '_csrf-backend' => 'f1fdb382352a530935f67892cadc55b0ae96d6a84ea318bbf02ed3e9616e8d24a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"TuTdjRpBjVvysXiLJjHcAp_iei_Kt_9g\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '45681'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/backend/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '235'
+    'HTTP_CONTENT_LENGTH' => '235'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; advanced-frontend=e7i6rk9lu6os0eq18odvbvoomt; _csrf-frontend=d4a9fcdff60a1b23e9b4cf1e457332d0792ec8dfb1ee47ffc9dc0b649d526200a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%228X0q8WLQG0fBkmpMLmxNU5K9FT8wDk8G%22%3B%7D; advanced-backend=k7oi08nud66gn4eesjoase00pa; _csrf-backend=f1fdb382352a530935f67892cadc55b0ae96d6a84ea318bbf02ed3e9616e8d24a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22TuTdjRpBjVvysXiLJjHcAp_iei_Kt_9g%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1542952377.4533
+    'REQUEST_TIME' => 1542952377
+]
+2018-11-23 10:18:01 [127.0.0.1][-][3lc0o8e9bp711kr1aiclbctrjh][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "backend/web/". in /var/www/html/project/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('backend/web/', Array)
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/project/backend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/project/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/project/backend/web/index.php(17): yii\base\Application->run()
+#2 {main}
+2018-11-23 10:18:01 [127.0.0.1][-][3lc0o8e9bp711kr1aiclbctrjh][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-backend' => 'ffa446b5b264593059548104d8312ebffbb96587b9b0c2fa57e0874cf46d7248a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"5sUZFy-mDO0WJ5XVEgnqa50ggjWCu__t\";}'
+    '_csrf-frontend' => 'edf9c6bd4b402613ab14c977e919c986bcd6a1a1fdb5b73f9392f15266c53c0ba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"cMElqWSoVF1GY2BYBTh4QHHblUM2XPYb\";}'
+    'advanced-frontend' => '46cr25pn9s76vvch8s7uvpteiu'
+    'advanced-backend' => '3lc0o8e9bp711kr1aiclbctrjh'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '51585'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/backend/web/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/backend/web/index.php'
+    'PATH_INFO' => '/backend/web/'
+    'PHP_SELF' => '/index.php/backend/web/'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-backend=ffa446b5b264593059548104d8312ebffbb96587b9b0c2fa57e0874cf46d7248a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%225sUZFy-mDO0WJ5XVEgnqa50ggjWCu__t%22%3B%7D; _csrf-frontend=edf9c6bd4b402613ab14c977e919c986bcd6a1a1fdb5b73f9392f15266c53c0ba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22cMElqWSoVF1GY2BYBTh4QHHblUM2XPYb%22%3B%7D; advanced-frontend=46cr25pn9s76vvch8s7uvpteiu; advanced-backend=3lc0o8e9bp711kr1aiclbctrjh'
+    'REQUEST_TIME_FLOAT' => 1542968281.7239
+    'REQUEST_TIME' => 1542968281
+]
+2018-11-26 05:04:57 [127.0.0.1][-][ka10ed02ert7e1m3od4oqpu616][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/site/login". in /var/www/html/project/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/site/login', Array)
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/project/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#2 {main}
+2018-11-26 05:04:57 [127.0.0.1][-][ka10ed02ert7e1m3od4oqpu616][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => '1ec88301102a7b5da7973d07bcae41086ed746cda384d0250734adae77302b28a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"PB40by4G3o_AsnT8E5dzuWAPeWNeE-ZT\";}'
+    'advanced-frontend' => 'e8vg77orrrj66jktmv7vk4b4lc'
+    '_csrf-backend' => 'eb7969937fab2321b5b70e8eeb0307014f503049981f1fe734cd01b5f8a5fa6aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"PJIxCTV17WXk0i4AFWpZ_LdycWRKYoSX\";}'
+    'advanced-backend' => 'ka10ed02ert7e1m3od4oqpu616'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '47932'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/site/login'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PATH_INFO' => '/site/login'
+    'PHP_SELF' => '/admin/index.php/site/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=1ec88301102a7b5da7973d07bcae41086ed746cda384d0250734adae77302b28a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22PB40by4G3o_AsnT8E5dzuWAPeWNeE-ZT%22%3B%7D; advanced-frontend=e8vg77orrrj66jktmv7vk4b4lc; _csrf-backend=eb7969937fab2321b5b70e8eeb0307014f503049981f1fe734cd01b5f8a5fa6aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22PJIxCTV17WXk0i4AFWpZ_LdycWRKYoSX%22%3B%7D; advanced-backend=ka10ed02ert7e1m3od4oqpu616'
+    'REQUEST_TIME_FLOAT' => 1543208697.8953
+    'REQUEST_TIME' => 1543208697
+]
+2018-11-26 05:42:57 [127.0.0.1][-][-][error][Error] Error: Call to undefined function backend\controllers\redirect() in /var/www/html/project/backend/controllers/SiteController.php:99
+Stack trace:
+#0 [internal function]: backend\controllers\SiteController->actionLogout()
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('logout', Array)
+#4 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/logout', Array)
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#7 {main}
+2018-11-26 05:42:57 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => 'ZtJ8JvcUisnyXTWdKUW-ms0816AfsQ0841sr-Dw4hpktv0VUwnvN-roEUeoQDNrKiw_j4ljWQE2FMUiKDXLZzw=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => '1ec88301102a7b5da7973d07bcae41086ed746cda384d0250734adae77302b28a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"PB40by4G3o_AsnT8E5dzuWAPeWNeE-ZT\";}'
+    'advanced-frontend' => 'e8vg77orrrj66jktmv7vk4b4lc'
+    'advanced-backend' => '3q8v9773ba6foig3p255j1q5h9'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => '057172171ae57ac36396544d220d4e720168a1ab8b91b87d550fe1d01023cb81a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Km9r5oG3HYdw9IdPF34BGgMqfjcr1J_V\";}'
+]
+
+$_SESSION = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '49206'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/logout'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PATH_INFO' => '/logout'
+    'PHP_SELF' => '/admin/index.php/logout'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '106'
+    'HTTP_CONTENT_LENGTH' => '106'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=1ec88301102a7b5da7973d07bcae41086ed746cda384d0250734adae77302b28a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22PB40by4G3o_AsnT8E5dzuWAPeWNeE-ZT%22%3B%7D; advanced-frontend=e8vg77orrrj66jktmv7vk4b4lc; advanced-backend=3q8v9773ba6foig3p255j1q5h9; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=057172171ae57ac36396544d220d4e720168a1ab8b91b87d550fe1d01023cb81a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Km9r5oG3HYdw9IdPF34BGgMqfjcr1J_V%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543210977.9507
+    'REQUEST_TIME' => 1543210977
+]
+2018-11-26 07:21:44 [127.0.0.1][-][o3m7vk4ts8dbb4ejvecgfm2sn9][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'backend\assets\AdminLteAsset' in file: /var/www/html/project/backend/assets/AdminLteAsset.php. Namespace missing? in /var/www/html/project/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\assets\\...')
+#1 /var/www/html/project/backend/views/layouts/main.php(11): spl_autoload_call('backend\\assets\\...')
+#2 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/html/p...')
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('<div class="con...')
+#6 /var/www/html/project/backend/controllers/SiteController.php(84): yii\base\Controller->render('login', Array)
+#7 [internal function]: backend\controllers\SiteController->actionLogin()
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#11 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#12 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#14 {main}
+2018-11-26 07:21:44 [127.0.0.1][-][o3m7vk4ts8dbb4ejvecgfm2sn9][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    '_csrf-backend' => '2159180c9729063a366e327423782d8653095afe73f9db77f31b428a0f56254aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"RwXaYM2GZet_oyGWTHWJpsSbiyJUf6_R\";}'
+    'advanced-backend' => 'o3m7vk4ts8dbb4ejvecgfm2sn9'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '34328'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/login'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/admin/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/frontend/web'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; _csrf-backend=2159180c9729063a366e327423782d8653095afe73f9db77f31b428a0f56254aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22RwXaYM2GZet_oyGWTHWJpsSbiyJUf6_R%22%3B%7D; advanced-backend=o3m7vk4ts8dbb4ejvecgfm2sn9'
+    'REQUEST_TIME_FLOAT' => 1543216904.2814
+    'REQUEST_TIME' => 1543216904
+]
+2018-11-26 07:22:24 [127.0.0.1][-][o3m7vk4ts8dbb4ejvecgfm2sn9][error][Error] Error: Class 'adminlte\widgets\Menu' not found in /var/www/html/project/backend/views/layouts/leftside.php:33
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(336): require()
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#2 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, NULL)
+#3 /var/www/html/project/backend/views/layouts/main.php(30): yii\base\View->render('leftside.php', Array)
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/html/p...')
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#7 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('<div class="con...')
+#8 /var/www/html/project/backend/controllers/SiteController.php(84): yii\base\Controller->render('login', Array)
+#9 [internal function]: backend\controllers\SiteController->actionLogin()
+#10 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#13 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#14 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#16 {main}
+2018-11-26 07:22:24 [127.0.0.1][-][o3m7vk4ts8dbb4ejvecgfm2sn9][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    '_csrf-backend' => '2159180c9729063a366e327423782d8653095afe73f9db77f31b428a0f56254aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"RwXaYM2GZet_oyGWTHWJpsSbiyJUf6_R\";}'
+    'advanced-backend' => 'o3m7vk4ts8dbb4ejvecgfm2sn9'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '34341'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/login'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/admin/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; _csrf-backend=2159180c9729063a366e327423782d8653095afe73f9db77f31b428a0f56254aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22RwXaYM2GZet_oyGWTHWJpsSbiyJUf6_R%22%3B%7D; advanced-backend=o3m7vk4ts8dbb4ejvecgfm2sn9'
+    'REQUEST_TIME_FLOAT' => 1543216944.5883
+    'REQUEST_TIME' => 1543216944
+]
+2018-11-26 07:26:02 [127.0.0.1][-][o3m7vk4ts8dbb4ejvecgfm2sn9][error][Error] Error: Class 'Menu' not found in /var/www/html/project/backend/views/layouts/leftside.php:33
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(336): require()
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#2 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, NULL)
+#3 /var/www/html/project/backend/views/layouts/main.php(30): yii\base\View->render('leftside.php', Array)
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/html/p...')
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#7 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('<div class="con...')
+#8 /var/www/html/project/backend/controllers/SiteController.php(84): yii\base\Controller->render('login', Array)
+#9 [internal function]: backend\controllers\SiteController->actionLogin()
+#10 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#13 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#14 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#16 {main}
+2018-11-26 07:26:02 [127.0.0.1][-][o3m7vk4ts8dbb4ejvecgfm2sn9][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    '_csrf-backend' => '2159180c9729063a366e327423782d8653095afe73f9db77f31b428a0f56254aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"RwXaYM2GZet_oyGWTHWJpsSbiyJUf6_R\";}'
+    'advanced-backend' => 'o3m7vk4ts8dbb4ejvecgfm2sn9'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '34430'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/login'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/admin/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; _csrf-backend=2159180c9729063a366e327423782d8653095afe73f9db77f31b428a0f56254aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22RwXaYM2GZet_oyGWTHWJpsSbiyJUf6_R%22%3B%7D; advanced-backend=o3m7vk4ts8dbb4ejvecgfm2sn9'
+    'REQUEST_TIME_FLOAT' => 1543217162.3358
+    'REQUEST_TIME' => 1543217162
+]
+2018-11-26 07:26:29 [127.0.0.1][-][o3m7vk4ts8dbb4ejvecgfm2sn9][error][ParseError] ParseError: syntax error, unexpected '?>' in /var/www/html/project/backend/views/layouts/leftside.php:71
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, NULL)
+#2 /var/www/html/project/backend/views/layouts/main.php(30): yii\base\View->render('leftside.php', Array)
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/html/p...')
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('<div class="con...')
+#7 /var/www/html/project/backend/controllers/SiteController.php(84): yii\base\Controller->render('login', Array)
+#8 [internal function]: backend\controllers\SiteController->actionLogin()
+#9 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#11 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#13 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#15 {main}
+2018-11-26 07:26:29 [127.0.0.1][-][o3m7vk4ts8dbb4ejvecgfm2sn9][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    '_csrf-backend' => '2159180c9729063a366e327423782d8653095afe73f9db77f31b428a0f56254aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"RwXaYM2GZet_oyGWTHWJpsSbiyJUf6_R\";}'
+    'advanced-backend' => 'o3m7vk4ts8dbb4ejvecgfm2sn9'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '34460'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/login'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/admin/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; _csrf-backend=2159180c9729063a366e327423782d8653095afe73f9db77f31b428a0f56254aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22RwXaYM2GZet_oyGWTHWJpsSbiyJUf6_R%22%3B%7D; advanced-backend=o3m7vk4ts8dbb4ejvecgfm2sn9'
+    'REQUEST_TIME_FLOAT' => 1543217189.5606
+    'REQUEST_TIME' => 1543217189
+]
+2018-11-26 07:26:57 [127.0.0.1][-][o3m7vk4ts8dbb4ejvecgfm2sn9][error][ParseError] ParseError: syntax error, unexpected '>' in /var/www/html/project/backend/views/layouts/leftside.php:32
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, NULL)
+#2 /var/www/html/project/backend/views/layouts/main.php(30): yii\base\View->render('leftside.php', Array)
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/html/p...')
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('<div class="con...')
+#7 /var/www/html/project/backend/controllers/SiteController.php(84): yii\base\Controller->render('login', Array)
+#8 [internal function]: backend\controllers\SiteController->actionLogin()
+#9 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#11 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#13 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#15 {main}
+2018-11-26 07:26:57 [127.0.0.1][-][o3m7vk4ts8dbb4ejvecgfm2sn9][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    '_csrf-backend' => '2159180c9729063a366e327423782d8653095afe73f9db77f31b428a0f56254aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"RwXaYM2GZet_oyGWTHWJpsSbiyJUf6_R\";}'
+    'advanced-backend' => 'o3m7vk4ts8dbb4ejvecgfm2sn9'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '34489'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/login'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/admin/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; _csrf-backend=2159180c9729063a366e327423782d8653095afe73f9db77f31b428a0f56254aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22RwXaYM2GZet_oyGWTHWJpsSbiyJUf6_R%22%3B%7D; advanced-backend=o3m7vk4ts8dbb4ejvecgfm2sn9'
+    'REQUEST_TIME_FLOAT' => 1543217217.1592
+    'REQUEST_TIME' => 1543217217
+]
+2018-11-26 07:27:11 [127.0.0.1][-][o3m7vk4ts8dbb4ejvecgfm2sn9][error][ParseError] ParseError: syntax error, unexpected '<' in /var/www/html/project/backend/views/layouts/leftside.php:73
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, NULL)
+#2 /var/www/html/project/backend/views/layouts/main.php(30): yii\base\View->render('leftside.php', Array)
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/html/p...')
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('<div class="con...')
+#7 /var/www/html/project/backend/controllers/SiteController.php(84): yii\base\Controller->render('login', Array)
+#8 [internal function]: backend\controllers\SiteController->actionLogin()
+#9 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#11 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#13 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#15 {main}
+2018-11-26 07:27:11 [127.0.0.1][-][o3m7vk4ts8dbb4ejvecgfm2sn9][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    '_csrf-backend' => '2159180c9729063a366e327423782d8653095afe73f9db77f31b428a0f56254aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"RwXaYM2GZet_oyGWTHWJpsSbiyJUf6_R\";}'
+    'advanced-backend' => 'o3m7vk4ts8dbb4ejvecgfm2sn9'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '34517'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/login'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/admin/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; _csrf-backend=2159180c9729063a366e327423782d8653095afe73f9db77f31b428a0f56254aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22RwXaYM2GZet_oyGWTHWJpsSbiyJUf6_R%22%3B%7D; advanced-backend=o3m7vk4ts8dbb4ejvecgfm2sn9'
+    'REQUEST_TIME_FLOAT' => 1543217231.591
+    'REQUEST_TIME' => 1543217231
+]
+2018-11-26 07:34:55 [127.0.0.1][-][o3m7vk4ts8dbb4ejvecgfm2sn9][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/project/backend/views/layouts/main.php in /var/www/html/project/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('<div class="con...')
+#2 /var/www/html/project/backend/controllers/SiteController.php(84): yii\base\Controller->render('login', Array)
+#3 [internal function]: backend\controllers\SiteController->actionLogin()
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#7 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#10 {main}
+2018-11-26 07:34:54 [127.0.0.1][-][o3m7vk4ts8dbb4ejvecgfm2sn9][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    '_csrf-backend' => '2159180c9729063a366e327423782d8653095afe73f9db77f31b428a0f56254aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"RwXaYM2GZet_oyGWTHWJpsSbiyJUf6_R\";}'
+    'advanced-backend' => 'o3m7vk4ts8dbb4ejvecgfm2sn9'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '35068'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/login'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/admin/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; _csrf-backend=2159180c9729063a366e327423782d8653095afe73f9db77f31b428a0f56254aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22RwXaYM2GZet_oyGWTHWJpsSbiyJUf6_R%22%3B%7D; advanced-backend=o3m7vk4ts8dbb4ejvecgfm2sn9'
+    'REQUEST_TIME_FLOAT' => 1543217694.9878
+    'REQUEST_TIME' => 1543217694
+]
+2018-11-26 07:37:40 [127.0.0.1][3][vfp8ah2s89a812pun4qgqovld3][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/project/backend/views/site/header.php in /var/www/html/project/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, NULL)
+#1 /var/www/html/project/backend/views/site/index.php(29): yii\base\View->render('header.php', Array)
+#2 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/html/p...')
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#6 /var/www/html/project/backend/controllers/SiteController.php(63): yii\base\Controller->render('index')
+#7 [internal function]: backend\controllers\SiteController->actionIndex()
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#11 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/', Array)
+#12 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#14 {main}
+2018-11-26 07:37:40 [127.0.0.1][3][vfp8ah2s89a812pun4qgqovld3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'vfp8ah2s89a812pun4qgqovld3'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => 'cf5766457e16bb7a96a6989f436ab72b66d969154261f789ce04ec5672f47d9fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"l40zOXFKCn0Xs5vLycEKxemWPo1nBkhj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '35114'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=vfp8ah2s89a812pun4qgqovld3; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=cf5766457e16bb7a96a6989f436ab72b66d969154261f789ce04ec5672f47d9fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22l40zOXFKCn0Xs5vLycEKxemWPo1nBkhj%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543217860.4715
+    'REQUEST_TIME' => 1543217860
+]
+2018-11-26 07:37:58 [127.0.0.1][3][vfp8ah2s89a812pun4qgqovld3][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/project/backend/views/site/leftside.php in /var/www/html/project/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, NULL)
+#1 /var/www/html/project/backend/views/site/index.php(30): yii\base\View->render('leftside.php', Array)
+#2 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/html/p...')
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#6 /var/www/html/project/backend/controllers/SiteController.php(63): yii\base\Controller->render('index')
+#7 [internal function]: backend\controllers\SiteController->actionIndex()
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#11 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/', Array)
+#12 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#14 {main}
+2018-11-26 07:37:58 [127.0.0.1][3][vfp8ah2s89a812pun4qgqovld3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'vfp8ah2s89a812pun4qgqovld3'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => 'cf5766457e16bb7a96a6989f436ab72b66d969154261f789ce04ec5672f47d9fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"l40zOXFKCn0Xs5vLycEKxemWPo1nBkhj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '35139'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=vfp8ah2s89a812pun4qgqovld3; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=cf5766457e16bb7a96a6989f436ab72b66d969154261f789ce04ec5672f47d9fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22l40zOXFKCn0Xs5vLycEKxemWPo1nBkhj%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543217878.955
+    'REQUEST_TIME' => 1543217878
+]
+2018-11-26 07:38:25 [127.0.0.1][3][vfp8ah2s89a812pun4qgqovld3][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: content in /var/www/html/project/backend/views/site/index.php:31
+Stack trace:
+#0 /var/www/html/project/backend/views/site/index.php(31): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/p...', 31, Array)
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/html/p...')
+#2 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#5 /var/www/html/project/backend/controllers/SiteController.php(63): yii\base\Controller->render('index')
+#6 [internal function]: backend\controllers\SiteController->actionIndex()
+#7 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#10 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/', Array)
+#11 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#13 {main}
+2018-11-26 07:38:25 [127.0.0.1][3][vfp8ah2s89a812pun4qgqovld3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'vfp8ah2s89a812pun4qgqovld3'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => 'cf5766457e16bb7a96a6989f436ab72b66d969154261f789ce04ec5672f47d9fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"l40zOXFKCn0Xs5vLycEKxemWPo1nBkhj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '35165'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=vfp8ah2s89a812pun4qgqovld3; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=cf5766457e16bb7a96a6989f436ab72b66d969154261f789ce04ec5672f47d9fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22l40zOXFKCn0Xs5vLycEKxemWPo1nBkhj%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543217905.6729
+    'REQUEST_TIME' => 1543217905
+]
+2018-11-26 07:45:49 [127.0.0.1][3][vfp8ah2s89a812pun4qgqovld3][error][ParseError] ParseError: syntax error, unexpected '(' in /var/www/html/project/backend/controllers/SiteController.php:77
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\control...')
+#1 [internal function]: spl_autoload_call('backend\\control...')
+#2 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(637): class_exists('backend\\control...')
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(596): yii\base\Module->createControllerByID('site')
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(522): yii\base\Module->createController('')
+#5 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/', Array)
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#8 {main}
+2018-11-26 07:45:49 [127.0.0.1][3][vfp8ah2s89a812pun4qgqovld3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'vfp8ah2s89a812pun4qgqovld3'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => 'cf5766457e16bb7a96a6989f436ab72b66d969154261f789ce04ec5672f47d9fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"l40zOXFKCn0Xs5vLycEKxemWPo1nBkhj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '35272'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=vfp8ah2s89a812pun4qgqovld3; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=cf5766457e16bb7a96a6989f436ab72b66d969154261f789ce04ec5672f47d9fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22l40zOXFKCn0Xs5vLycEKxemWPo1nBkhj%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543218349.8847
+    'REQUEST_TIME' => 1543218349
+]
+2018-11-26 07:46:12 [127.0.0.1][3][vfp8ah2s89a812pun4qgqovld3][error][ParseError] ParseError: syntax error, unexpected 'public' (T_PUBLIC) in /var/www/html/project/backend/controllers/SiteController.php:79
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\control...')
+#1 [internal function]: spl_autoload_call('backend\\control...')
+#2 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(637): class_exists('backend\\control...')
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(596): yii\base\Module->createControllerByID('site')
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(522): yii\base\Module->createController('')
+#5 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/', Array)
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#8 {main}
+2018-11-26 07:46:12 [127.0.0.1][3][vfp8ah2s89a812pun4qgqovld3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'vfp8ah2s89a812pun4qgqovld3'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => 'cf5766457e16bb7a96a6989f436ab72b66d969154261f789ce04ec5672f47d9fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"l40zOXFKCn0Xs5vLycEKxemWPo1nBkhj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '35286'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=vfp8ah2s89a812pun4qgqovld3; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=cf5766457e16bb7a96a6989f436ab72b66d969154261f789ce04ec5672f47d9fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22l40zOXFKCn0Xs5vLycEKxemWPo1nBkhj%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543218372.873
+    'REQUEST_TIME' => 1543218372
+]
+2018-11-26 08:36:10 [127.0.0.1][3][vms118tvp1161lcm3vjg64dhvr][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\web\View::layout in /var/www/html/project/vendor/yiisoft/yii2/base/Component.php:209
+Stack trace:
+#0 /var/www/html/project/backend/views/site/index.php(2): yii\base\Component->__set('layout', 'main-login-inne...')
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/html/p...')
+#2 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#5 /var/www/html/project/backend/controllers/SiteController.php(63): yii\base\Controller->render('index')
+#6 [internal function]: backend\controllers\SiteController->actionIndex()
+#7 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#10 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/', Array)
+#11 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#13 {main}
+2018-11-26 08:36:10 [127.0.0.1][3][vms118tvp1161lcm3vjg64dhvr][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'vms118tvp1161lcm3vjg64dhvr'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => '00f32f48aecf95710a1d4614499de686a42246fb6880e90ddab670d95ba08461a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"UnWktNo09cXZM6XoMjZhmxZJdTmknzbY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin/'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '36355'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=vms118tvp1161lcm3vjg64dhvr; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=00f32f48aecf95710a1d4614499de686a42246fb6880e90ddab670d95ba08461a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22UnWktNo09cXZM6XoMjZhmxZJdTmknzbY%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543221370.1908
+    'REQUEST_TIME' => 1543221370
+]
+2018-11-26 08:36:42 [127.0.0.1][3][vms118tvp1161lcm3vjg64dhvr][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\web\View::layout in /var/www/html/project/vendor/yiisoft/yii2/base/Component.php:209
+Stack trace:
+#0 /var/www/html/project/backend/views/site/index.php(17): yii\base\Component->__set('layout', 'main-login-inne...')
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/html/p...')
+#2 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#5 /var/www/html/project/backend/controllers/SiteController.php(63): yii\base\Controller->render('index')
+#6 [internal function]: backend\controllers\SiteController->actionIndex()
+#7 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#10 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/', Array)
+#11 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#13 {main}
+2018-11-26 08:36:42 [127.0.0.1][3][vms118tvp1161lcm3vjg64dhvr][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'vms118tvp1161lcm3vjg64dhvr'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => '00f32f48aecf95710a1d4614499de686a42246fb6880e90ddab670d95ba08461a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"UnWktNo09cXZM6XoMjZhmxZJdTmknzbY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin/'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '36368'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=vms118tvp1161lcm3vjg64dhvr; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=00f32f48aecf95710a1d4614499de686a42246fb6880e90ddab670d95ba08461a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22UnWktNo09cXZM6XoMjZhmxZJdTmknzbY%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543221402.4522
+    'REQUEST_TIME' => 1543221402
+]
+2018-11-26 08:41:29 [127.0.0.1][3][55ksd8ncmfpi2a7kbll0k1je85][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/project/backend/views/site/ /pages/index.php in /var/www/html/project/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render(' /pages/index', Array, Object(backend\controllers\SiteController))
+#2 /var/www/html/project/backend/controllers/SiteController.php(80): yii\base\Controller->render(' /pages/index')
+#3 [internal function]: backend\controllers\SiteController->actionLogin()
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#7 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#10 {main}
+2018-11-26 08:41:28 [127.0.0.1][3][55ksd8ncmfpi2a7kbll0k1je85][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => 'SBJ8io2kfWQv-cGVrSKYDWqOrz6XpEKpPnTR3w-pFeYdfCvh-eoSVBaamc_gFMBiJ-T1VvrcGONaILy0YdN3vw=='
+    'LoginForm' => [
+        'username' => 'TESTING'
+        'password' => 'testing'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    '_csrf-backend' => '00f32f48aecf95710a1d4614499de686a42246fb6880e90ddab670d95ba08461a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"UnWktNo09cXZM6XoMjZhmxZJdTmknzbY\";}'
+    'advanced-backend' => 'okn2n6k7v1ma8318ke32f8fnf1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '36706'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/admin/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '240'
+    'HTTP_CONTENT_LENGTH' => '240'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/admin/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; _csrf-backend=00f32f48aecf95710a1d4614499de686a42246fb6880e90ddab670d95ba08461a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22UnWktNo09cXZM6XoMjZhmxZJdTmknzbY%22%3B%7D; advanced-backend=okn2n6k7v1ma8318ke32f8fnf1'
+    'REQUEST_TIME_FLOAT' => 1543221688.9256
+    'REQUEST_TIME' => 1543221688
+]
+2018-11-26 08:45:18 [127.0.0.1][3][hm5lejf9pft2u6dpot88ipm4fo][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/project/backend/views/site/index.php in /var/www/html/project/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#2 /var/www/html/project/backend/controllers/SiteController.php(63): yii\base\Controller->render('index')
+#3 [internal function]: backend\controllers\SiteController->actionIndex()
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#7 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/', Array)
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#10 {main}
+2018-11-26 08:45:18 [127.0.0.1][3][hm5lejf9pft2u6dpot88ipm4fo][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'hm5lejf9pft2u6dpot88ipm4fo'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => '9222fb6c083cfd32f87de539ef06c5d645ed50c131d37027bf7d61660265ebf6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"C1mBkOrs2og1LFm8WFdc3jdC4u_UVSwF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '37232'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=hm5lejf9pft2u6dpot88ipm4fo; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=9222fb6c083cfd32f87de539ef06c5d645ed50c131d37027bf7d61660265ebf6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22C1mBkOrs2og1LFm8WFdc3jdC4u_UVSwF%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543221918.778
+    'REQUEST_TIME' => 1543221918
+]
+2018-11-26 08:45:46 [127.0.0.1][3][hm5lejf9pft2u6dpot88ipm4fo][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/project/backend/views/site/index.php in /var/www/html/project/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#2 /var/www/html/project/backend/controllers/SiteController.php(63): yii\base\Controller->render('index')
+#3 [internal function]: backend\controllers\SiteController->actionIndex()
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#7 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/', Array)
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#10 {main}
+2018-11-26 08:45:46 [127.0.0.1][3][hm5lejf9pft2u6dpot88ipm4fo][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'hm5lejf9pft2u6dpot88ipm4fo'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => '9222fb6c083cfd32f87de539ef06c5d645ed50c131d37027bf7d61660265ebf6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"C1mBkOrs2og1LFm8WFdc3jdC4u_UVSwF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '37243'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=hm5lejf9pft2u6dpot88ipm4fo; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=9222fb6c083cfd32f87de539ef06c5d645ed50c131d37027bf7d61660265ebf6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22C1mBkOrs2og1LFm8WFdc3jdC4u_UVSwF%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543221946.1572
+    'REQUEST_TIME' => 1543221946
+]
+2018-11-26 08:45:47 [127.0.0.1][3][hm5lejf9pft2u6dpot88ipm4fo][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/project/backend/views/site/index.php in /var/www/html/project/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#2 /var/www/html/project/backend/controllers/SiteController.php(63): yii\base\Controller->render('index')
+#3 [internal function]: backend\controllers\SiteController->actionIndex()
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#7 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/', Array)
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#10 {main}
+2018-11-26 08:45:47 [127.0.0.1][3][hm5lejf9pft2u6dpot88ipm4fo][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'hm5lejf9pft2u6dpot88ipm4fo'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => '9222fb6c083cfd32f87de539ef06c5d645ed50c131d37027bf7d61660265ebf6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"C1mBkOrs2og1LFm8WFdc3jdC4u_UVSwF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '37247'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=hm5lejf9pft2u6dpot88ipm4fo; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=9222fb6c083cfd32f87de539ef06c5d645ed50c131d37027bf7d61660265ebf6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22C1mBkOrs2og1LFm8WFdc3jdC4u_UVSwF%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543221947.8858
+    'REQUEST_TIME' => 1543221947
+]
+2018-11-26 08:46:08 [127.0.0.1][3][hm5lejf9pft2u6dpot88ipm4fo][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/project/backend/views/site/index.php in /var/www/html/project/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#2 /var/www/html/project/backend/controllers/SiteController.php(63): yii\base\Controller->render('index')
+#3 [internal function]: backend\controllers\SiteController->actionIndex()
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#7 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/', Array)
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#10 {main}
+2018-11-26 08:46:08 [127.0.0.1][3][hm5lejf9pft2u6dpot88ipm4fo][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'hm5lejf9pft2u6dpot88ipm4fo'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => '9222fb6c083cfd32f87de539ef06c5d645ed50c131d37027bf7d61660265ebf6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"C1mBkOrs2og1LFm8WFdc3jdC4u_UVSwF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '37260'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=hm5lejf9pft2u6dpot88ipm4fo; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=9222fb6c083cfd32f87de539ef06c5d645ed50c131d37027bf7d61660265ebf6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22C1mBkOrs2og1LFm8WFdc3jdC4u_UVSwF%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543221968.0233
+    'REQUEST_TIME' => 1543221968
+]
+2018-11-26 08:46:11 [127.0.0.1][3][hm5lejf9pft2u6dpot88ipm4fo][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/project/backend/views/site/index.php in /var/www/html/project/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#2 /var/www/html/project/backend/controllers/SiteController.php(63): yii\base\Controller->render('index')
+#3 [internal function]: backend\controllers\SiteController->actionIndex()
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#7 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/', Array)
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#10 {main}
+2018-11-26 08:46:11 [127.0.0.1][3][hm5lejf9pft2u6dpot88ipm4fo][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'hm5lejf9pft2u6dpot88ipm4fo'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => '9222fb6c083cfd32f87de539ef06c5d645ed50c131d37027bf7d61660265ebf6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"C1mBkOrs2og1LFm8WFdc3jdC4u_UVSwF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '37264'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=hm5lejf9pft2u6dpot88ipm4fo; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=9222fb6c083cfd32f87de539ef06c5d645ed50c131d37027bf7d61660265ebf6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22C1mBkOrs2og1LFm8WFdc3jdC4u_UVSwF%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543221971.3683
+    'REQUEST_TIME' => 1543221971
+]
+2018-11-26 08:46:34 [127.0.0.1][3][hm5lejf9pft2u6dpot88ipm4fo][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/project/backend/views/site/index.php in /var/www/html/project/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#2 /var/www/html/project/backend/controllers/SiteController.php(63): yii\base\Controller->render('index')
+#3 [internal function]: backend\controllers\SiteController->actionIndex()
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#7 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/', Array)
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#10 {main}
+2018-11-26 08:46:34 [127.0.0.1][3][hm5lejf9pft2u6dpot88ipm4fo][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'hm5lejf9pft2u6dpot88ipm4fo'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => '9222fb6c083cfd32f87de539ef06c5d645ed50c131d37027bf7d61660265ebf6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"C1mBkOrs2og1LFm8WFdc3jdC4u_UVSwF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '37374'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/frontend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=hm5lejf9pft2u6dpot88ipm4fo; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=9222fb6c083cfd32f87de539ef06c5d645ed50c131d37027bf7d61660265ebf6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22C1mBkOrs2og1LFm8WFdc3jdC4u_UVSwF%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543221994.855
+    'REQUEST_TIME' => 1543221994
+]
+2018-11-26 08:48:37 [127.0.0.1][3][hm5lejf9pft2u6dpot88ipm4fo][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/project/backend/views/layouts/main-login-inner.php in /var/www/html/project/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('\n<!DOCTYPE html...')
+#2 /var/www/html/project/backend/controllers/SiteController.php(64): yii\base\Controller->render('index')
+#3 [internal function]: backend\controllers\SiteController->actionIndex()
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#7 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/', Array)
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#10 {main}
+2018-11-26 08:48:37 [127.0.0.1][3][hm5lejf9pft2u6dpot88ipm4fo][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'hm5lejf9pft2u6dpot88ipm4fo'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => '9222fb6c083cfd32f87de539ef06c5d645ed50c131d37027bf7d61660265ebf6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"C1mBkOrs2og1LFm8WFdc3jdC4u_UVSwF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '37427'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=hm5lejf9pft2u6dpot88ipm4fo; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=9222fb6c083cfd32f87de539ef06c5d645ed50c131d37027bf7d61660265ebf6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22C1mBkOrs2og1LFm8WFdc3jdC4u_UVSwF%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543222117.2637
+    'REQUEST_TIME' => 1543222117
+]
+2018-11-26 08:53:45 [127.0.0.1][3][4drn5vggvo42ap12sjghk4re7i][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/project/backend/views/layouts/yourNewLayout.php in /var/www/html/project/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('')
+#2 /var/www/html/project/backend/controllers/SiteController.php(80): yii\base\Controller->render('index')
+#3 [internal function]: backend\controllers\SiteController->actionLogin()
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#7 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#10 {main}
+2018-11-26 08:53:45 [127.0.0.1][3][4drn5vggvo42ap12sjghk4re7i][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => 'Vyv_Hbv50IiEE9TA3GcSvnunXHgpDPMJMuOfkvPSMXQUGpJf0Lai-7Z8s_GQIX-GLOE4Gxpml0oGlsDHpYFGMg=='
+    'LoginForm' => [
+        'username' => 'testing'
+        'password' => 'testing'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    '_csrf-backend' => '9222fb6c083cfd32f87de539ef06c5d645ed50c131d37027bf7d61660265ebf6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"C1mBkOrs2og1LFm8WFdc3jdC4u_UVSwF\";}'
+    'advanced-backend' => '60l695dfpookk1dgjqoivomgdp'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '37827'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/admin/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '240'
+    'HTTP_CONTENT_LENGTH' => '240'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/admin/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; _csrf-backend=9222fb6c083cfd32f87de539ef06c5d645ed50c131d37027bf7d61660265ebf6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22C1mBkOrs2og1LFm8WFdc3jdC4u_UVSwF%22%3B%7D; advanced-backend=60l695dfpookk1dgjqoivomgdp'
+    'REQUEST_TIME_FLOAT' => 1543222425.1749
+    'REQUEST_TIME' => 1543222425
+]
+2018-11-26 08:55:25 [127.0.0.1][3][ppaq540c5tk39sa11e1kd9pns1][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/project/backend/views/layouts/main-login-inner.php in /var/www/html/project/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('')
+#2 /var/www/html/project/backend/controllers/SiteController.php(80): yii\base\Controller->render('index')
+#3 [internal function]: backend\controllers\SiteController->actionLogin()
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#7 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#10 {main}
+2018-11-26 08:55:24 [127.0.0.1][3][ppaq540c5tk39sa11e1kd9pns1][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => '2T2xzxXQnWeZMaqHDas1P9xpKo8wbE09F_duxmitR8btfOv-XZPIKsYG6chu7lB2kjxA-HQkH2gmugeOEP11kg=='
+    'LoginForm' => [
+        'username' => 'testing'
+        'password' => 'testing'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    '_csrf-backend' => 'fe5a8038f60878c45de6743eef0d95f68db00623781ef94b4333760e1c1416d6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4AZ1HCUM_7COcEeINUjwDHRU1MiHxP2T\";}'
+    'advanced-backend' => 'hoh63d08aa9ljmj6jvgthcu6vg'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '37995'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/admin/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '240'
+    'HTTP_CONTENT_LENGTH' => '240'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/admin/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; _csrf-backend=fe5a8038f60878c45de6743eef0d95f68db00623781ef94b4333760e1c1416d6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224AZ1HCUM_7COcEeINUjwDHRU1MiHxP2T%22%3B%7D; advanced-backend=hoh63d08aa9ljmj6jvgthcu6vg'
+    'REQUEST_TIME_FLOAT' => 1543222524.9034
+    'REQUEST_TIME' => 1543222524
+]
+2018-11-26 08:55:32 [127.0.0.1][3][ppaq540c5tk39sa11e1kd9pns1][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Unable to verify your data submission. in /var/www/html/project/vendor/yiisoft/yii2/web/Controller.php:166
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#2 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#5 {main}
+2018-11-26 08:55:32 [127.0.0.1][3][ppaq540c5tk39sa11e1kd9pns1][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => '2T2xzxXQnWeZMaqHDas1P9xpKo8wbE09F_duxmitR8btfOv-XZPIKsYG6chu7lB2kjxA-HQkH2gmugeOEP11kg=='
+    'LoginForm' => [
+        'username' => 'testing'
+        'password' => 'testing'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'ppaq540c5tk39sa11e1kd9pns1'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => '0eed0fff86893629a99eda22c1c9af5525ad25fa852a17d996058b7a425eab40a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"W5uWwP7yCJpQFacSYJ5DcNrbVnfqqDMY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '37999'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/admin/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '240'
+    'HTTP_CONTENT_LENGTH' => '240'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/admin/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=ppaq540c5tk39sa11e1kd9pns1; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=0eed0fff86893629a99eda22c1c9af5525ad25fa852a17d996058b7a425eab40a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22W5uWwP7yCJpQFacSYJ5DcNrbVnfqqDMY%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543222532.1718
+    'REQUEST_TIME' => 1543222532
+]
+2018-11-26 08:55:41 [127.0.0.1][3][ppaq540c5tk39sa11e1kd9pns1][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Unable to verify your data submission. in /var/www/html/project/vendor/yiisoft/yii2/web/Controller.php:166
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#2 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#5 {main}
+2018-11-26 08:55:41 [127.0.0.1][3][ppaq540c5tk39sa11e1kd9pns1][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => '2T2xzxXQnWeZMaqHDas1P9xpKo8wbE09F_duxmitR8btfOv-XZPIKsYG6chu7lB2kjxA-HQkH2gmugeOEP11kg=='
+    'LoginForm' => [
+        'username' => 'testing'
+        'password' => 'testing'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'ppaq540c5tk39sa11e1kd9pns1'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => '0eed0fff86893629a99eda22c1c9af5525ad25fa852a17d996058b7a425eab40a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"W5uWwP7yCJpQFacSYJ5DcNrbVnfqqDMY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '38015'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/admin/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '240'
+    'HTTP_CONTENT_LENGTH' => '240'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/admin/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=ppaq540c5tk39sa11e1kd9pns1; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=0eed0fff86893629a99eda22c1c9af5525ad25fa852a17d996058b7a425eab40a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22W5uWwP7yCJpQFacSYJ5DcNrbVnfqqDMY%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543222541.0425
+    'REQUEST_TIME' => 1543222541
+]
+2018-11-26 08:58:35 [127.0.0.1][3][ppaq540c5tk39sa11e1kd9pns1][error][ParseError] ParseError: syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) or const (T_CONST) in /var/www/html/project/backend/controllers/SiteController.php:19
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\control...')
+#1 [internal function]: spl_autoload_call('backend\\control...')
+#2 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(637): class_exists('backend\\control...')
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(596): yii\base\Module->createControllerByID('site')
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(522): yii\base\Module->createController('')
+#5 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/', Array)
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#8 {main}
+2018-11-26 08:58:35 [127.0.0.1][3][ppaq540c5tk39sa11e1kd9pns1][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'ppaq540c5tk39sa11e1kd9pns1'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => '0eed0fff86893629a99eda22c1c9af5525ad25fa852a17d996058b7a425eab40a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"W5uWwP7yCJpQFacSYJ5DcNrbVnfqqDMY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '38112'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=ppaq540c5tk39sa11e1kd9pns1; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=0eed0fff86893629a99eda22c1c9af5525ad25fa852a17d996058b7a425eab40a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22W5uWwP7yCJpQFacSYJ5DcNrbVnfqqDMY%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543222715.99
+    'REQUEST_TIME' => 1543222715
+]
+2018-11-26 09:03:26 [127.0.0.1][3][9gp26h3kcknqtp757dbcgn1ale][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/project/backend/views/layouts/.php in /var/www/html/project/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('\n<!DOCTYPE html...')
+#2 /var/www/html/project/backend/controllers/SiteController.php(82): yii\base\Controller->render('index')
+#3 [internal function]: backend\controllers\SiteController->actionLogin()
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#7 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#10 {main}
+2018-11-26 09:03:26 [127.0.0.1][3][9gp26h3kcknqtp757dbcgn1ale][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => 'jfilc9OMqc-fYW5K72_pOJZDU0BzQ2Kohe7BSEccxwjkv8c8qdvHvN0AInupDdtJ0AEUckYST_7OmYwkICnwSw=='
+    'LoginForm' => [
+        'username' => 'testing'
+        'password' => 'testing'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    '_csrf-backend' => '96e166b83ad061b6f1f9954a10bfe6dd480ec00e2b45e73fe2a371f969f31328a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"iGbOzWnsBaL1Fb2qFBG25Q-VKwMlg57C\";}'
+    'advanced-backend' => '2pn9gha91r4b12fi203njtgsk6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '39106'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/admin/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '240'
+    'HTTP_CONTENT_LENGTH' => '240'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/admin/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; _csrf-backend=96e166b83ad061b6f1f9954a10bfe6dd480ec00e2b45e73fe2a371f969f31328a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22iGbOzWnsBaL1Fb2qFBG25Q-VKwMlg57C%22%3B%7D; advanced-backend=2pn9gha91r4b12fi203njtgsk6'
+    'REQUEST_TIME_FLOAT' => 1543223006.2489
+    'REQUEST_TIME' => 1543223006
+]
+2018-11-26 09:08:21 [127.0.0.1][3][ag18g2dvj7jaiuc64m02oe77af][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/project/backend/views/layouts/header.php in /var/www/html/project/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, NULL)
+#1 /var/www/html/project/backend/views/layouts/maini.php(29): yii\base\View->render('header.php', Array)
+#2 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/html/p...')
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('\n<!DOCTYPE html...')
+#6 /var/www/html/project/backend/controllers/SiteController.php(82): yii\base\Controller->render('index')
+#7 [internal function]: backend\controllers\SiteController->actionLogin()
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#11 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#12 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#14 {main}
+2018-11-26 09:08:20 [127.0.0.1][3][ag18g2dvj7jaiuc64m02oe77af][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => 'qWbNZ85VWj9Co10cwgX_8eS25UfUwoabQfja0wv_m1aREYMDoWYXcB2SBESHVbjDk_6CDuCos8kptr2Dbc-iGA=='
+    'LoginForm' => [
+        'username' => 'testing'
+        'password' => 'testing'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    '_csrf-backend' => 'd8075fb0a30d2fc187dede1600845f60ce2419ac4b26943c5d84394b5c1cc6bfa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8wNdo3MO_1YXEPG2wHgI4j5RhNgPf09N\";}'
+    'advanced-backend' => 'cb4illlafqni12m6e8p38v96iq'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '39808'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/admin/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '240'
+    'HTTP_CONTENT_LENGTH' => '240'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/admin/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; _csrf-backend=d8075fb0a30d2fc187dede1600845f60ce2419ac4b26943c5d84394b5c1cc6bfa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228wNdo3MO_1YXEPG2wHgI4j5RhNgPf09N%22%3B%7D; advanced-backend=cb4illlafqni12m6e8p38v96iq'
+    'REQUEST_TIME_FLOAT' => 1543223300.4855
+    'REQUEST_TIME' => 1543223300
+]
+2018-11-26 09:09:24 [127.0.0.1][3][ag18g2dvj7jaiuc64m02oe77af][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/project/backend/views/site/header.php in /var/www/html/project/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, NULL)
+#1 /var/www/html/project/backend/views/site/index.php(30): yii\base\View->render('header.php', Array)
+#2 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/html/p...')
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#6 /var/www/html/project/backend/controllers/SiteController.php(65): yii\base\Controller->render('index')
+#7 [internal function]: backend\controllers\SiteController->actionIndex()
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#11 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/', Array)
+#12 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#14 {main}
+2018-11-26 09:09:24 [127.0.0.1][3][ag18g2dvj7jaiuc64m02oe77af][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'ag18g2dvj7jaiuc64m02oe77af'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => 'eb2028776799f8670d124cc85f13b568cf29fcac25b425ec192fa36dbfac7638a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Rs4MXt4dO_RY1qyF6i-6hqt03C_3v5IZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '39834'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=ag18g2dvj7jaiuc64m02oe77af; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=eb2028776799f8670d124cc85f13b568cf29fcac25b425ec192fa36dbfac7638a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Rs4MXt4dO_RY1qyF6i-6hqt03C_3v5IZ%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543223364.3194
+    'REQUEST_TIME' => 1543223364
+]
+2018-11-26 09:09:27 [127.0.0.1][3][ag18g2dvj7jaiuc64m02oe77af][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/project/backend/views/site/header.php in /var/www/html/project/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, NULL)
+#1 /var/www/html/project/backend/views/site/index.php(30): yii\base\View->render('header.php', Array)
+#2 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/html/p...')
+#3 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#4 /var/www/html/project/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(backend\controllers\SiteController))
+#5 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\SiteController))
+#6 /var/www/html/project/backend/controllers/SiteController.php(65): yii\base\Controller->render('index')
+#7 [internal function]: backend\controllers\SiteController->actionIndex()
+#8 /var/www/html/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/project/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/project/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#11 /var/www/html/project/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/', Array)
+#12 /var/www/html/project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/project/admin/index.php(18): yii\base\Application->run()
+#14 {main}
+2018-11-26 09:09:27 [127.0.0.1][3][ag18g2dvj7jaiuc64m02oe77af][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'AMCV_17EB401053DAF4840A490D4C@AdobeOrg' => '-227196251|MCIDTS|17851|MCMID|23920706598729222729014673478508569505|MCAAMLH-1542888849|3|MCAAMB-1542888849|RKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y|MCOPTOUT-1542291250s|NONE|MCAID|NONE'
+    '__hstc' => '181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1'
+    'hubspotutk' => '6278e2d2e24d8763fb2ea1186277261c'
+    '_identity' => '4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+    '_csrf-frontend' => 'de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y\";}'
+    'advanced-frontend' => 'mo94lq2rtflag7savlqsraa1nr'
+    'advanced-backend' => 'ag18g2dvj7jaiuc64m02oe77af'
+    '_identity-backend' => 'a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX\",2592000]\";}'
+    '_csrf-backend' => 'eb2028776799f8670d124cc85f13b568cf29fcac25b425ec192fa36dbfac7638a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Rs4MXt4dO_RY1qyF6i-6hqt03C_3v5IZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/var/www/html/project'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '39858'
+    'SERVER_SOFTWARE' => 'PHP 7.1.18-1+ubuntu14.04.1+deb.sury.org+1 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/admin/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/admin/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/project/admin/index.php'
+    'PHP_SELF' => '/admin/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C17851%7CMCMID%7C23920706598729222729014673478508569505%7CMCAAMLH-1542888849%7C3%7CMCAAMB-1542888849%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1542291250s%7CNONE%7CMCAID%7CNONE; __hstc=181257784.6278e2d2e24d8763fb2ea1186277261c.1542629373770.1542629373770.1542629373770.1; hubspotutk=6278e2d2e24d8763fb2ea1186277261c; _identity=4e9bfa146c7def0f7888c36d7cc61afa7217c634c9a3392eb9488ea146a78d01a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D; _csrf-frontend=de2956125ec37fafcb816a67730b9516d0657bbcf71158e7b031d59bd9e06e26a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GIA3WhlTkgW8KOeAIYcILw55Siq8-__Y%22%3B%7D; advanced-frontend=mo94lq2rtflag7savlqsraa1nr; advanced-backend=ag18g2dvj7jaiuc64m02oe77af; _identity-backend=a0006b6b3a0762edfc4e590dfe1251a3626f011d6f5db1c0a55adc03198a735da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22z2Qzxoj_sa38PHZQS0NKRqxkcrYz4unX%22%2C2592000%5D%22%3B%7D; _csrf-backend=eb2028776799f8670d124cc85f13b568cf29fcac25b425ec192fa36dbfac7638a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Rs4MXt4dO_RY1qyF6i-6hqt03C_3v5IZ%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1543223367.603
+    'REQUEST_TIME' => 1543223367
+]

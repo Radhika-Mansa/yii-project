@@ -1,0 +1,23 @@
+Message-ID: <75475f25d42844a18875351112ec0a7a@localhost>
+Date: Mon, 26 Nov 2018 06:41:33 +0000
+Subject: Message subject
+From: 
+To: radhikarani1590@gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_1543214493_3835100820b7280d1cb41a370ec087e0_=_"
+
+
+--_=_swift_1543214493_3835100820b7280d1cb41a370ec087e0_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Plain text content
+
+--_=_swift_1543214493_3835100820b7280d1cb41a370ec087e0_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<b>HTML content</b>
+
+--_=_swift_1543214493_3835100820b7280d1cb41a370ec087e0_=_--
