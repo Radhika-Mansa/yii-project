@@ -50,7 +50,7 @@ class SiteController extends Controller
     }
     public function actionIndex()
     {
-        ///$this->layout = 'maini';
+        $this->layout = 'maini';
         return $this->render('index');
     }
 
